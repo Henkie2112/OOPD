@@ -1,14 +1,17 @@
-Damsteen lol;
-Damsteen lol2;
+
+Damsteen[] stenen = new Damsteen[4];
 
 void setup() {
   size(500, 500);
-  lol = new Damsteen(100, 100, 50, 0);
-  lol2 = new Damsteen(200, 200, 50, 255);
+  stenen[0] = new Damsteen(50, 50, 50, 0);
+  stenen[1] = new Damsteen(100, 100, 50, 0);
+  stenen[2] = new Damsteen(100, 50, 50, 255);
+  stenen[3] = new Damsteen(50, 100, 50, 255);  
 }
 
 void draw() {
-  background(125);
-  lol.tekenDamSteen();
-  lol2.tekenDamSteen();
+  background(#fa8072);
+  for (int i = 0; i < stenen.length; i++) {
+    stenen[i].tekenDamSteen(); 
+  }
 }
