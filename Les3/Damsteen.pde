@@ -10,6 +10,7 @@ class Damsteen {
   
   void tekenDamSteen() {
     fill(kleur);
+    noStroke();
     ellipse(x, y, diameter, diameter);
   }
 }
