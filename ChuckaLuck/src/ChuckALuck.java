@@ -2,26 +2,26 @@
 public class ChuckALuck {
 	Dobbelbeker dobbelBeker = new Dobbelbeker();
 	int[] waarde = new int[3];
-	int ogen;
 	int inzet;
 	int verdubbelaar;
-	int ronde;
+	int ronde = 1;
+	int saldo;
 	
-	public ChuckALuck(int ogen, int inzet) {
-		this.ogen = ogen;
-		this.inzet = inzet;
+	public ChuckALuck(int saldo) {
 		this.waarde = dobbelBeker.dobbelen();
-		ronde = 0;
+		this.saldo = saldo;
 	}
 	
-	public int spel() {
-		verdubbelaar = 0;
+	public int spel(int geluksGetal, int inzet) {
+		verdubbelaar = -1;
 		int[] stenen = dobbelBeker.dobbelen();
+		System.out.println("ronde: " + ronde);
+		System.out.println("Saldo: " + saldo);
 		System.out.println(stenen[0] + "+" + stenen[1] + "+" + stenen[2]);
 		for(int i = 0; i < 3; i++) {
-			if(waarde[i] == ogen) {
+			if(waarde[i] == geluksGetal) {
 				switch (verdubbelaar) {
-				case 0:
+				case -1:
 					verdubbelaar = 1;
 					break;
 				case 1:
@@ -34,7 +34,9 @@ public class ChuckALuck {
 			}
 		}
 		ronde++;
-		return inzet * verdubbelaar;
+		inzet = inzet * verdubbelaar;
+		saldo += inzet;
+		return inzet;
 	}
 	
 	public String toString() {
