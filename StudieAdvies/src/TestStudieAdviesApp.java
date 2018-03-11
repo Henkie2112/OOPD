@@ -13,5 +13,5 @@ public class TestStudieAdviesApp {
 		System.out.println(s1);
 		System.out.println(StudieAdviseur.krijgtPositiefStudieadvies(s1));
 		System.out.println("------------------");
-	}
+ }
 }
