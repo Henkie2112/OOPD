@@ -19,7 +19,8 @@ public class Tekstraam implements IDoelwit {
 	public void schakel() {
 		if (isAan) {
 			app.fill(0xFFA4C739);
-		} else {
+		} 
+		else {
 			app.fill(255);
 		}
 	}

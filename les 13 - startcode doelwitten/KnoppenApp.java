@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import processing.core.PApplet;
 
-@SuppressWarnings("serial")
+//@SuppressWarnings("serial")
 public class KnoppenApp extends PApplet {
 	
 	public static void main(String[] args) {
